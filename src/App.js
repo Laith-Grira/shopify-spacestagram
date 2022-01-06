@@ -1,34 +1,25 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import NasaPicture from './components/NasaPicture';
 import './App.css';
+import axios from 'axios';
 
 
 function App() {
 
-  // Mock data
-  const mockData = [
-      {
-        title: "Picture 1",
-        date: "25-02-2021",
-        description: "This is the first picture",
-        image: "a-link-for-picture-com",
-      },
-      {
-        title: "Picture 2",
-        date: "20-02-2017",
-        description: "This is the second picture",
-        image: "a-link-for-picture-com",
-      },
-      {
-        title: "Picture 3",
-        date: "29-02-2020",
-        description: "This is the third picture",
-        image: "a-link-for-picture-com",
-      }
-    ];
-  
-  // Grouping the API data insude of an array of objects
-  const [nasaPicturesData, setNasaPicturesData] = useState(mockData);
+  //Varaible for the number of pictures to see
+  let [picturesCount, setPicturesCount] = useState(5);
+
+  // URL from the nasa api
+  let [nasaUrl, setNasaUrl] = useState(`https://api.nasa.gov/planetary/apod?api_key=${process.env.REACT_APP_NASA_KEY}&count=${picturesCount}`);
+
+  // Grouping the API data insude of an array of objects.
+  let [nasaPicturesData, setNasaPicturesData] = useState([]);
+
+  useEffect(() => {
+    axios.get(nasaUrl)
+         .then(res => setNasaPicturesData(res.data))
+         .catch(err => console.error(err));
+  }, [nasaUrl]);
 
 
   return (
@@ -36,13 +27,14 @@ function App() {
       <h1>Starting project</h1>
       <div className="pictures-array">
             {
+                
                 nasaPicturesData.map((data,key) => (
                     <NasaPicture
                         key={key}
                         title={data.title}
                         date={data.date}
-                        description={data.description}
-                        image={data.image}
+                        description={data.explanation}
+                        image={data.url}
                     />
                 ))
             }
