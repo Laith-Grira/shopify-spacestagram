@@ -1,0 +1,26 @@
+/* Importing font style */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+
+/* base styles */
+* {
+  margin: 0;
+  font-family: "Quicksand";
+  color: #333;
+}
+
+.page-container {
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.content-wrap{
+  flex: 1;
+  margin-bottom: 100px;
+}
+
+.content {
+  padding-top: 100px;
+}

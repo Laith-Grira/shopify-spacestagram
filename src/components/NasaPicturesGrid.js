@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 import NasaPicture from './NasaPicture';
+import './NasaPicturesGrid.scss';
 
 
 const NasaPicturesGrid = () => {
