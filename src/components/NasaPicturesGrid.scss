@@ -8,6 +8,23 @@
     justify-content: space-around;
 }
 
+.count-input-container {
+    margin: 0 20px 0 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+#count-input-value {
+    width: 100px;
+}
+
+#counter-title {
+    font-size: 20px;
+    margin-right: 30px;
+}
+
 @media only screen and (max-width: 720px) {
     .pictures-grid {
         width: 100%;

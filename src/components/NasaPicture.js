@@ -17,8 +17,8 @@ const NasaPicture = props => {
             <p><strong>Date:</strong> {props.date}</p>
             <p><strong>Description:</strong> {props.description}</p>
             <div className="like-toggle">
-                <button type="button" class="btn btn-primary" disabled={likeToggle} onClick={onToggleLikeButton}>Like</button>
-                <button type="button" class="btn btn-danger" disabled={!likeToggle} onClick={onToggleLikeButton}>Unlike</button>
+                <button type="button" className="btn btn-primary" disabled={likeToggle} onClick={onToggleLikeButton}>Like</button>
+                <button type="button" className="btn btn-danger" disabled={!likeToggle} onClick={onToggleLikeButton}>Unlike</button>
             </div>
         </div>
      );
