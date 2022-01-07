@@ -1,4 +1,5 @@
 import { useState } from "react";
+import DateModifier from "./utils/DateModifier";
 import './NasaPicture.scss';
 
 const NasaPicture = props => {
@@ -14,7 +15,7 @@ const NasaPicture = props => {
         <div className="element-modal">
             <h2 id="picture-title">{props.title}</h2>
             <img src={props.image} alt="Nasa-galaxy" className="mb-3" />
-            <p><strong>Date:</strong> {props.date}</p>
+            <p><strong>Date:</strong> <DateModifier  date={props.date} /> </p>
             <p><strong>Description:</strong> {props.description}</p>
             <div className="like-toggle">
                 <button type="button" className="btn btn-primary" disabled={likeToggle} onClick={onToggleLikeButton}>Like</button>
