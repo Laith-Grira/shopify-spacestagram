@@ -1,0 +1,24 @@
+// Styling for the picture and details container
+.element-modal {
+    margin: 50px 15px 50px 15px;
+    padding: 10px;
+    width: 500px;
+    text-align: justify;
+    & img {
+        width: 100%;
+    }
+}
+
+// Styling of the title
+#picture-title {
+    text-align: center;
+}
+
+.like-toggle {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    & button {
+        width: 120px;
+    }
+}
