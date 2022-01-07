@@ -13,3 +13,12 @@
 #picture-title {
     text-align: center;
 }
+
+.like-toggle {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    & button {
+        width: 120px;
+    }
+}

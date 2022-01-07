@@ -3,7 +3,12 @@ import './NasaPicture.scss';
 
 const NasaPicture = props => {
 
-    const [pictureLiked, setPictureLiked] = useState(false);
+    // variable for the toggling between like and unlike
+    const [likeToggle, setLikeToggle] = useState(false);
+
+    const onToggleLikeButton = () => {
+        setLikeToggle(!likeToggle);
+    }
 
     return ( 
         <div className="element-modal">
@@ -11,7 +16,10 @@ const NasaPicture = props => {
             <img src={props.image} alt="Nasa-galaxy" className="mb-3" />
             <p><strong>Date:</strong> {props.date}</p>
             <p><strong>Description:</strong> {props.description}</p>
-            <button type="button" class="btn btn-primary">Like</button>
+            <div className="like-toggle">
+                <button type="button" class="btn btn-primary" disabled={likeToggle} onClick={onToggleLikeButton}>Like</button>
+                <button type="button" class="btn btn-danger" disabled={!likeToggle} onClick={onToggleLikeButton}>Unlike</button>
+            </div>
         </div>
      );
 }
