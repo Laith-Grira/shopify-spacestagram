@@ -12,8 +12,11 @@ const NasaPicturesGrid = () => {
     //Varaible for the number of pictures to see, deafult is 5
     let [picturesCount, setPicturesCount] = useState(5);
 
+    // This key should be inside an .env file, but it's exposed due to the free hosting website used
+    const REACT_APP_NASA_KEY = 'bOmu8hsTnHmfnN7SZngd1e12cQUBvpooO9FdYg5U';
+
     // API endpoint
-    const URL = `https://api.nasa.gov/planetary/apod?api_key=${process.env.REACT_APP_NASA_KEY}&count=${picturesCount}`;
+    const URL = `https://api.nasa.gov/planetary/apod?api_key=${REACT_APP_NASA_KEY}&count=${picturesCount}`;
 
     // URL variable from the nasa api
     let [nasaUrl, setNasaUrl] = useState(URL);
