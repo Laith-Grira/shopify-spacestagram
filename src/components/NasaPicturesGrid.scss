@@ -7,3 +7,10 @@
     flex-wrap: wrap;
     justify-content: space-around;
 }
+
+@media only screen and (max-width: 720px) {
+    .pictures-grid {
+        width: 100%;
+        margin-left: 0;
+    }
+}
