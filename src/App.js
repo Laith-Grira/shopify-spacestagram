@@ -1,5 +1,5 @@
-import NasaPicturesGrid from './components/NasaPicturesGrid';
-import ShopifyLogo from './assets/shopify-text-log.png';
+import NasaPicturesGrid from './components/NasaPicturesGrid/NasaPicturesGrid';
+import Header from './components/Header/Header';
 import './App.scss';
 
 
@@ -7,10 +7,7 @@ const App = () => {
 
   return (
     <div>
-      <header>
-        <img src={ShopifyLogo} alt="shopify-logo" />
-        <h3>Shopify Summer 2022 Coding Challange</h3>
-      </header>
+      <Header />
       <div className="App mt-3">
         <span id='main-page-title'>Make Commerce Better for Everyone</span>
         <div className='page-description'>
