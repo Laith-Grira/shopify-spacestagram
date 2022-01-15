@@ -1,11 +1,10 @@
 import { useState } from "react";
 import { Card } from '@shopify/polaris';
-import DateModifier from "./utils/DateModifier";
+import DateModifier from "../utils/DateModifier";
 import './NasaPicture.scss';
 
 const NasaPicture = props => {
 
-    // variable for the toggling between like and unlike
     const [likeToggle, setLikeToggle] = useState(false);
 
     const onToggleLikeButton = () => {
