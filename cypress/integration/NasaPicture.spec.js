@@ -14,7 +14,7 @@ describe('Testing NasaPicture component', () => {
     it('Check the title, date, and description of a modal', () => {
         cy.get('.pictures-grid .element-modal')
           .first()
-          .get('#picture-title')
+          .get('.Polaris-Heading')
           .should('exist');
         cy.get('.pictures-grid .element-modal')
           .first()
@@ -28,8 +28,8 @@ describe('Testing NasaPicture component', () => {
         cy.get('.pictures-grid .element-modal img')
           .should('be.visible')
           .and(($img) => {
-          expect($img[0].naturalWidth).to.be.greaterThan(0)
-        })
+            expect($img[0].naturalWidth).to.be.greaterThan(0)
+          })
     });
 
     it('Check like and unlike buttons', () => {
