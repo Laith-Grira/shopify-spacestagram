@@ -26,4 +26,4 @@ The project contains Cypress e2e tests. To run those tests, make sure to have gi
 ![image](https://user-images.githubusercontent.com/59850587/149605662-133116f6-09fb-4218-844c-6c83a22c2632.png)
 
 
-If you want to open the Cypess UI, you can run `cypress open` on any of the components to test them.
+If you want to open the Cypess UI, you can run `cypress open`, and once the UI appears, click on any of the tests to run them (Make sure that the app is still running).
