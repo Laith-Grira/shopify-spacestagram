@@ -1,4 +1,4 @@
-# Shopify Challange Summer 2022
+# Spacestagram: Shopify Challenge Summer 2022
 
 &nbsp;
 ## Website link:
