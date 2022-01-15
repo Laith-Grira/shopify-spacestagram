@@ -9,8 +9,8 @@
 Welcome to my attempt to the Shopify FrontEnd challenge for Summer 2022. <br />
 In this challenge, I have built a web page that displays some of the NASA pictures with description, these data are from the NASA API. <br />
 The website is composed of a header, some description of the web page, some nasa pictures with description, date, and like/unlike buttons. There are 5 pictures by default, but you can increase or decrease this number using the input field in the web page. <br />
-The feature that I chose is to enable the user to choose the number of pictures that he/she wants to see. <br>
-The website is responsive for mobile users too.
+The website is responsive for mobile users too. <br />
+-> The feature that I chose is to enable the user to choose the number of pictures that he/she wants to see. <br>
 
 **N.B:** the API chosen does return random data each time it's called, so you might notice that during the page reload or when the input field is set to a different number, the data is changed. Also, some of the NASA pictures have an invalid url for the image (this is a rare case but it happens sometimes), you reload the page to see different pictures. 
 
