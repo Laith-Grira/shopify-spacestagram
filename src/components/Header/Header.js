@@ -5,7 +5,7 @@ const Header = () => {
     return ( 
         <header>
             <img src={ShopifyLogo} alt="shopify-logo" />
-            <h3>Shopify Summer 2022 Coding Challange</h3>
+            <h3>Shopify Summer 2022 Coding Challenge</h3>
         </header>
      );
 }
