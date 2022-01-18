@@ -21,7 +21,7 @@ const NasaPicturesGrid = () => {
             .catch(err => console.error(err));
     }, [nasaUrl]);
 
-    // update the counter for the images
+    // update the API key withe new count number
     const updateUrlCount = () => {
         setNasaUrl(URL);
     }
