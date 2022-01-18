@@ -1,6 +1,8 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Card } from '@shopify/polaris';
+import Aos from 'aos';
 import DateModifier from "../utils/DateModifier";
+import 'aos/dist/aos.css';
 import './NasaPicture.scss';
 
 const NasaPicture = props => {
@@ -11,8 +13,13 @@ const NasaPicture = props => {
         setLikeToggle(!likeToggle);
     }
 
+    // Add animation on Scroll
+    useEffect(() => {
+        Aos.init({ duration: 3000 });
+    }, []);
+
     return ( 
-        <div className="element-modal">
+        <div className="element-modal" data-aos="fade-up">
             <Card title={props.title} sectioned>
                 <img src={props.image} alt="Nasa-galaxy" className="mb-3" />
                 <p><strong>Date:</strong> <DateModifier  date={props.date} /> </p>
